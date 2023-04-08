@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+
+<body>
+    <div class="container">
+        <h2>My shopping cart</h2>
+        <div class="cart">
+            <div class="col-md-12 col-lg-10 mx-auto">
+                <div class="cart-item">
+                    <div class="row">
+                        <div class="col-md-7 center-item">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/210644/iphone-11-den-200x200.jpg"
+                                alt="iphone11">
+                            <h5>Iphone 11 128GB Black($850)</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                            <div class="input-group">
+                                <button id="phone-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                <input id="phone-number" type="number" min="0" class="form-control text-center"
+                                    value="1">
+                                <button id="phone-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <h5>$ <span id="phone-total">850</span> </h5>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQqbEj_bypwfbl72tr4SZfVQOrPrmADq8-A&usqp=CAU" alt="" class="remove-item">
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="row">
+                        <div class="col-md-7 center-item">
+                            <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/i/p/iphone-11-pro-max-space-select-2019_1_1_3_2.png"
+                                alt="iphone11 pro max">
+                            <h5>Iphone 11 pro max 64GB Black($500)</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                            <div class="input-group">
+                                <button id="phone-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                <input id="phone-number" type="number" min="0" class="form-control text-center"
+                                    value="1">
+                                <button id="phone-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <h5>$ <span id="phone-total">500</span> </h5>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQqbEj_bypwfbl72tr4SZfVQOrPrmADq8-A&usqp=CAU" alt="" class="remove-item">
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="row">
+                        <div class="col-md-7 center-item">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/213033/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg"
+                                alt="iphone12 pro max ">
+                            <h5>Iphone 12 pro max 128GB Blue($1100)</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                            <div class="input-group">
+                                <button id="phone-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                <input id="phone-number" type="number" min="0" class="form-control text-center"
+                                    value="1">
+                                <button id="phone-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <h5>$ <span id="phone-total">1100</span> </h5>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQqbEj_bypwfbl72tr4SZfVQOrPrmADq8-A&usqp=CAU" alt="" class="remove-item">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./add.js"></script>
+</body>
+
+</html>

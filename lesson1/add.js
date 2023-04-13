@@ -1,20 +1,43 @@
-
-const number = document.querySelector('#phone-number');
-const plus = document.querySelector('#phone-plus');
-const minus = document.querySelector('#phone-minus');
-
-plus.addEventListener('click', function (e) {
-    let phone = parseInt(number.value);
-    phone++;
-    number.value = phone;
-
-});
-
-minus.addEventListener('click', function (e) {
-    let phone = parseInt(number.value);
-    if (phone >= 1) {
-        phone--;
-        number.value = phone;
+function upadateCaseNumber(product, price, isIncreasing) {
+    const caseInput = document.getElementById(product + '-number');
+    let caseNumber = caseInput.value;
+    if (isIncreasing) {
+        caseNumber = parseInt(caseNumber) + 1;
     }
+
+    else if (caseNumber > 0) {
+        caseNumber = parseInt(caseNumber) - 1;
+    }
+
+    caseInput.value = caseNumber;
+    // update case total 
+    const caseTotal = document.getElementById(product + '-total');
+    caseTotal.innerText = caseNumber * price;
+    calculateTotal();
+}
+
+document.getElementById('case-plus').addEventListener('click', function () {
+    upadateCaseNumber('case', 500, true);
 });
 
+document.getElementById('case-minus').addEventListener('click', function () {
+    upadateCaseNumber('case', 500, false);
+});
+
+// phone prcie update using add event linstner 
+document.getElementById('phone-plus').addEventListener('click', function () {
+    upadateCaseNumber('phone', 850, true);
+});
+
+
+document.getElementById('phone-minus').addEventListener('click', function () {
+    upadateCaseNumber('phone', 850, false);
+});
+
+document.getElementById('iphone-plus').addEventListener('click', function () {
+    upadateCaseNumber('iphone', 1100, true);
+});
+
+document.getElementById('iphone-minus').addEventListener('click', function () {
+    upadateCaseNumber('iphone', 1100, false);
+});

@@ -7,11 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My cart</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <section class="product">
-        <h1 style="color: red;padding: 20px;">My Shopping</h1>
+        <div class="shopping">
+            <h1 style="color: red;padding: 20px;">My Shopping</h1>
+            <p><i class="fa-solid fa-cart-shopping"></i><span style="margin-left: 5px;">0</span><sup>đ</sup></p>
+        </div>
         <div class="container">
             <div class="product-items">
                 <div class="product-item">
@@ -50,6 +54,7 @@
         </div>
     </section>
     <section class="cart">
+        <i class="fa-solid fa-circle-xmark"></i>
         <h2>Cart</h2>
         <form action="">
             <table>
@@ -67,6 +72,7 @@
             <div class="price-total" style="text-align: right;">
                 <p style="font-weight: bold;">Tổng tiền: <span>0 <sup>đ</sup></span></p>
             </div>
+            <button>Đặt hàng</button>
         </form>
 
     </section>

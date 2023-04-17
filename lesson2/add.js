@@ -26,6 +26,7 @@ function addCart(productImg, productName, productSpan) {
     const cartTable = document.querySelector("tbody")
     cartTable.append(addtr)
     cartTotal()
+    deleteCart()
 }
 
 // total price
@@ -37,20 +38,44 @@ function cartTotal() {
         let producPrice = cartItem[i].querySelector(".price").innerHTML
         total = inputValue * producPrice * 1000
         totalPrice += total
-        totalA = totalPrice.toLocaleString('de-DE')
-
     }
     let cartTotalA = document.querySelector(".price-total span")
-    cartTotalA.innerHTML = totalA
+    let cartTotalB = document.querySelector(".shopping span")
+    cartTotalA.innerHTML = totalPrice.toLocaleString('de-DE')
+    cartTotalB.innerHTML = totalPrice.toLocaleString('de-DE')
+    inputChange()
+}
+// delete cart
+function deleteCart() {
+    let cartItem = document.querySelectorAll("tbody tr")
+    for (let i = 0; i < cartItem.length; i++) {
+        let product1 = document.querySelectorAll(".delete")
+        product1[i].addEventListener("click", function (e) {
+            let deleteCart = e.target
+            let cartItem1 = deleteCart.parentElement
+            cartItem1.remove()
+            cartTotal()
+        })
+    }
 }
 
-// function deleteCart() {
-//     for (let i = 0; i < cartItem.length; i++) {
-//         let product1 = document.querySelectorAll(".delete")
-//         product1.addEventListener("click", function(e) {
-//             let deleteCart = e.target
-//             let cartItem1 = deleteCart.parentElement.parentElement
-//             cartItem1.remove()
-//         })
-//     }
-// }
+function inputChange(){
+    let cartItem = document.querySelectorAll("tbody tr")
+    for (let i = 0; i < cartItem.length; i++) {
+        let product2 = cartItem[i].querySelector("input")
+        product2.addEventListener("change",function() {
+        cartTotal()
+        })
+    }
+}
+
+let cartBtn = document.querySelector(".fa-circle-xmark")
+let cartShow = document.querySelector(".fa-cart-shopping")
+
+cartShow.addEventListener("click",function(){
+document.querySelector(".cart").style.right = "0"
+})
+cartBtn.addEventListener("click",function(){
+document.querySelector(".cart").style.right = "-100%"
+})
+
